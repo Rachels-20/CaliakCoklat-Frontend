@@ -94,4 +94,4 @@ Frontend berkomunikasi dengan backend menggunakan REST API untuk:
 
 
 
-Project ini dikembangkan sebagai bagian dari **Project Based Learning (PBL)** di **Politeknik Negeri Padang** untuk tujuan pembelajaran dan pengembangan sistem monitoring perkebunan kakao berbasis IoT.
+Project ini dibuat sebagai bagian dari **Project Based Learning (PBL)** di **Politeknik Negeri Padang** untuk tujuan pembelajaran dan pengembangan sistem monitoring perkebunan kakao berbasis IoT.
