@@ -27,8 +27,8 @@ Data dari berbagai sensor pada perangkat ESP32 dikirimkan secara **berkala** ke 
 ### Frontend
 
 * PHP Native
-* HTML5
-* CSS3
+* HTML
+* CSS
 * JavaScript
 
 ### Komunikasi Data
