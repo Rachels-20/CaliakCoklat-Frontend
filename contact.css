@@ -1,0 +1,309 @@
+/*RESET*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+body {
+    background: #eef4d8;
+    overflow-x: hidden;
+}
+
+/*LAYOUT*/
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: stretch;
+}
+
+/*LEFT PANEL*/
+.left {
+    width: 40%;
+    height: auto;
+    min-height: 100vh;
+
+    position: relative;
+    overflow: hidden;
+
+    background: url('assets/contact.png') center/cover no-repeat;
+
+    color: white;
+
+    padding: 100px 40px 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    animation: slideLeft 1s ease;
+}
+
+.left::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(135deg,
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.1));
+}
+
+.left>* {
+    position: relative;
+    z-index: 1;
+}
+
+.left h1 {
+    font-size: 40px;
+    margin-bottom: 40px;
+
+    animation: fadeUp 1s ease;
+}
+
+.desc {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 50px;
+}
+
+/*CONTACT INFO*/
+.info-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    width: 100%;
+
+    padding: 10px;
+    margin-bottom: 25px;
+
+    border-radius: 12px;
+
+    transition: .3s;
+}
+
+.info-row:hover {
+    background: rgba(255, 255, 255, .15);
+    transform: translateX(10px);
+}
+
+.icon {
+    width: 40px;
+    font-size: 30px;
+    text-align: center;
+    flex-shrink: 0;
+
+    transition: .3s;
+}
+
+.info-row:hover .icon {
+    color: #d9a15b;
+    transform: scale(1.2);
+}
+
+.text p {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.text span {
+    font-size: 17px;
+}
+
+.link-text,
+.email-link {
+    color: white;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.link-text:hover,
+.email-link:hover {
+    color: #d1914f;
+}
+
+/*RIGHT PANEL*/
+.right {
+    width: 60%;
+    min-height: 100vh;
+
+    background: #eef4d8;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 100px 60px 60px;
+
+    animation: slideRight 1s ease;
+}
+
+.form-container {
+    width: 80%;
+    max-width: 900px;
+}
+
+.form-container h2 {
+    color: #6b4226;
+    font-size: 40px;
+    font-weight: 700;
+
+    margin-bottom: 50px;
+
+    text-shadow: 0 2px 6px rgba(0, 0, 0, .25);
+
+    animation: fadeUp 1s ease;
+}
+
+/*FORM*/
+.input-group {
+    position: relative;
+    margin-bottom: 28px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+
+    padding: 14px 20px;
+
+    font-size: 18px;
+    color: #333;
+
+    background: transparent;
+
+    border: 2px solid #bc6c25;
+    border-radius: 20px;
+
+    outline: none;
+
+    transition: .3s;
+}
+
+.input-group textarea {
+    height: 180px;
+    resize: none;
+}
+
+/*FLOATING LABEL*/
+.input-group label {
+    position: absolute;
+
+    left: 22px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #bc6c25;
+    font-size: 16px;
+
+    pointer-events: none;
+
+    transition: .3s;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: #b07d3c;
+    box-shadow: 0 0 15px rgba(176, 125, 60, .3);
+}
+
+.input-group input:focus+label,
+.input-group input:valid+label,
+.input-group textarea:focus+label,
+.input-group textarea:valid+label {
+    top: 0;
+
+    padding: 0 8px;
+
+    background: #eef4d8;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+}
+
+/*BUTTONS*/
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+
+    margin-top: 15px;
+}
+
+.submit,
+.btn-kembali {
+    width: 120px;
+    height: 42px;
+
+    background: #bc6c25;
+    color: white;
+
+    border: none;
+    border-radius: 24px;
+
+    cursor: pointer;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: .3s;
+}
+
+.submit:hover,
+.btn-kembali:hover {
+    background: #d1914f;
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 20px rgba(176, 125, 60, .3);
+}
+
+.submit:active,
+.btn-kembali:active {
+    transform: translateY(0);
+}
+
+/*ANIMATIONS*/
+@keyframes slideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideRight {
+    from {
+        opacity: 0;
+        transform: translateX(80px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
