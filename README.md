@@ -87,6 +87,14 @@ Frontend berkomunikasi dengan backend menggunakan REST API untuk:
 * Menampilkan notifikasi
 * Menampilkan laporan mingguan
 
+## Cara Menjalankan
+
+1. Clone repository.
+2. Simpan project pada Laragon atau XAMPP.
+3. Jalankan backend.
+4. Sesuaikan `config/config.php`.
+5. Buka aplikasi melalui browser.
+
 ## Kontributor
 
 * Rachel Setiawan
